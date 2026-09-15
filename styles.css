@@ -3506,6 +3506,7 @@ body {
         display: flex !important;
         flex-direction: column !important;
         gap: 4px !important;
+        min-width: 0 !important;
     }
 
     .booking-options-grid .form-group label {
@@ -3536,6 +3537,10 @@ body {
         border-radius: 10px !important;
         background: #ffffff !important;
         width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
     }
 
     .btn-search-trains {
@@ -3714,6 +3719,78 @@ body {
         color: #ffffff !important;
         border: none !important;
         cursor: pointer !important;
+    }
+
+    /* Ticket route: prevent cutoff on mobile */
+    .ticket-body {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 8px 0 16px 0 !important;
+        overflow: hidden !important;
+    }
+
+    .station-node {
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+    }
+
+    .station-code {
+        font-size: 1.35rem !important;
+        font-weight: 800 !important;
+    }
+
+    .station-name {
+        font-size: 0.72rem !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        max-width: 90px !important;
+    }
+
+    .time-label {
+        font-size: 0.78rem !important;
+    }
+
+    .journey-line {
+        padding: 0 10px !important;
+        flex-shrink: 0 !important;
+        min-width: 50px !important;
+    }
+
+    .line-train-icon {
+        font-size: 0.9rem !important;
+        padding: 0 4px !important;
+    }
+
+    /* Account Detail: prevent overflow on mobile */
+    .info-field-card {
+        padding: 14px 14px !important;
+        gap: 10px !important;
+        overflow: hidden !important;
+    }
+
+    .field-left-content {
+        min-width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .field-value-lg {
+        font-size: 0.9rem !important;
+        word-break: break-all !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .field-row-split {
+        grid-template-columns: auto 1fr !important;
+        gap: 10px !important;
+    }
+
+    .btn-field-edit {
+        padding: 7px 14px !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
     }
 }
 
